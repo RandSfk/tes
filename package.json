@@ -1,16 +1,21 @@
 {
-  "name": "nodejs-sandbox",
+  "name": "bot-wa-baileys",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bot WhatsApp sederhana pakai Baileys + qr-terminal",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch index.js"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "Ives van Hoorne",
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "bot",
+    "qr-terminal"
+  ],
+  "author": "yourname",
   "license": "MIT",
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.7.16",
-    "qrcode-terminal": "^0.12.0"
+    "@whiskeysockets/baileys": "^6.7.0",
+    "qr-terminal": "^0.12.0"
   }
 }
