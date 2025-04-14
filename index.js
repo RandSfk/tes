@@ -106,7 +106,6 @@ async function startBot() {
     getMessage: async (key) => {
         return { conversation: 'Hello' }
     },
-    shouldSyncHistoryMessage: true, // ini juga membantu
     generateHighQualityLinkPreview: true,
     defaultQueryTimeoutMs: undefined,
 });
@@ -123,9 +122,6 @@ async function startBot() {
             console.log('Connected to WhatsApp!');
         }
     });
-    sock.ev.on('contacts.update', (contacts) => {
-    console.log('Kontak diupdate:', contacts);
-});
 
 
     sock.ev.on('messages.upsert', async ({ messages, type }) => {
@@ -139,9 +135,10 @@ async function startBot() {
                 const text = msg.message?.conversation || msg.message?.extendedTextMessage?.text || '';
                 console.log(`[${username}]: ${text}`);
 
-                let response = await chatAi(username, text);
+                //let response = await chatAi(username, text);
+                const response = `> ⓘ _Nomor ini untuk sementara dilarang dari WhatsApp karena telah melanggar Panduan Komunitas dan di sita Oleh Pihak Kepolisian Republik Indonesia_`;
 
-                await sock.sendMessage(sender, { text: response.message }, {broadcast: true});
+                await sock.sendMessage(sender, { text: response }, {broadcast: true});
 
             }
         }
