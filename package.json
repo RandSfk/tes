@@ -9,7 +9,7 @@
   "main": "a.js",
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon a.js",
+    "start": "node a.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "RandSfk",
